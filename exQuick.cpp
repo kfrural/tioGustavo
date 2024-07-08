@@ -1,3 +1,4 @@
+//FEITO POR KARLA E WESLEY
 
 #include <iostream>
 using namespace std;
@@ -44,16 +45,19 @@ void quickSort(int arr[], int low, int high, int meiinho, int meiao) {
             partition(arr, low, high-1);
             if(pi == arr[meiao]){
                 mediana2 = arr[meiao];
-            } else if (pi > meiinho) {
+            } 
+        }else if (pi != arr[meiinho]) {
                 quickSort(arr, pi + 1, high, meiinho, meiao);
             } else {
                 quickSort(arr, low, pi - 1,meiinho, meiao);
             }
-        }
-            cout << "A mediana :" << (mediana1 + mediana2) / 2;
+            
         
     }
     
+    cout << "\nA mediana :" << (mediana1 + mediana2) / 2;
+    
+    //Gustavo, ta imprimindo o resultado certo primeiro, esta dando erro na pilha de recursividade, esta imprimindo o primero correto, e os outros não, não consegui fazer isso parar.
 }
 
 int main() {
